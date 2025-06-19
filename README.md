@@ -2,6 +2,8 @@
 
 为 Obsidian 添加一个美观实用的首页功能，便于快速访问和搜索笔记。
 
+![ecd1cf4932fe205d6bc78abc3addc7c3](https://github.com/user-attachments/assets/f075787a-3ccf-4502-85cc-e6862e823e2a)
+
 ## 功能特点
 
 - **自定义首页视图**：现代化界面设计，清晰展示置顶笔记和最近打开的笔记

@@ -1,0 +1,11 @@
+{
+	"id": "obsidian-home",
+	"name": "Home",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "显示一个直观美观的首页，提供笔记搜索、置顶笔记和最近打开笔记功能",
+	"author": "dlzmoe",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}

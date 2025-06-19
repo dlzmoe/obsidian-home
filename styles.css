@@ -1,0 +1,222 @@
+/* 整体容器 */
+.home-plugin-view {
+	padding: 20px 60px !important;
+	max-width: 800px;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #FAFAFA;
+}
+
+/* 搜索部分 */
+.home-search-container {
+	margin-top: 8vh;
+	margin-bottom: 24px;
+	text-align: center;
+	position: relative;
+	z-index: 1000;
+	width: 100%;
+}
+
+.home-search-input {
+	width: 80%;
+	height: 36px;
+	font-size: 14px;
+	padding: 5px 15px;
+	border-radius: 6px;
+	border: 1px solid var(--background-modifier-border);
+	background-color: #fff;
+	color: var(--text-normal);
+	transition: all 0.3s ease;
+}
+
+.home-search-input:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 搜索结果 */
+.home-search-results-container {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	margin-top: 8px;
+	max-height: 300px;
+	overflow-y: auto;
+	border-radius: 6px;
+	border: 1px solid var(--background-modifier-border);
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	display: none;
+}
+
+.home-search-results-container.is-visible {
+	display: block;
+}
+
+.home-search-results {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* 搜索结果项目 */
+.home-search-result-item {
+	padding: 6px 8px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	transition: background-color 0.15s ease;
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+
+.home-search-result-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.home-search-result-item:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+}
+
+.home-search-result-item a,
+.home-search-result-item .home-note-link {
+	color: var(--text-normal);
+	text-decoration: none;
+	display: block;
+	padding: 2px 0;
+	width: 100%;
+}
+
+.home-no-results {
+	color: var(--text-muted);
+	font-style: italic;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* 两栏布局 */
+.home-columns-container {
+	display: flex;
+	flex-grow: 1;
+	gap: 32px;
+}
+
+.home-column {
+	flex: 1;
+	max-width: 50%;
+	overflow: auto;
+	padding: 0;
+	background-color: transparent;
+}
+
+.home-column h2 {
+	font-size: 16px;
+	margin-bottom: 16px;
+	color: var(--text-normal);
+	font-weight: 600;
+}
+
+/* 置顶和最近笔记列表 */
+.home-pinned-list,
+.home-recent-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.home-pinned-item,
+.home-recent-item {
+	padding: 5px 0;
+	transition: background-color 0.15s ease;
+}
+
+.home-pinned-item:last-child,
+.home-recent-item:last-child {
+	border-bottom: none;
+}
+
+.home-note-link {
+	color: var(--text-normal);
+	text-decoration: none;
+	font-size: 14px;
+	padding: 4px 0;
+}
+
+/* 空列表消息 */
+.home-empty-message {
+	color: var(--text-muted);
+	font-style: italic;
+	text-align: left;
+	padding: 10px 0;
+	font-size: 14px;
+}
+
+/* 设置面板 */
+.home-setting-pinned-list {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+/* 拖拽样式 */
+.home-setting-pinned-item {
+	position: relative;
+	margin: 5px 0;
+	border: 1px solid transparent;
+}
+
+.home-setting-pinned-item.is-dragging {
+	opacity: 0.5;
+}
+
+.home-setting-pinned-item.drag-over {
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-drag-handle {
+	cursor: grab;
+	color: var(--text-muted);
+	margin-right: 8px;
+}
+
+.home-drag-handle:hover {
+	color: var(--text-normal);
+}
+
+.home-setting-pinned-item .setting-item {
+	border: none;
+	padding: 6px;
+}
+
+.home-setting-pinned-item .setting-item:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+	.home-columns-container {
+		flex-direction: column;
+	}
+
+	.home-column {
+		max-width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.home-search-input {
+		width: 90%;
+	}
+}

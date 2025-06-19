@@ -207,6 +207,11 @@
 
 /* 移动设备适配 */
 @media (max-width: 768px) {
+
+	.home-plugin-view {
+		padding: 20px 60px !important;
+	}
+
 	.home-columns-container {
 		flex-direction: column;
 	}
@@ -216,7 +221,8 @@
 		margin-bottom: 16px;
 	}
 
-	.home-search-input {
+	.home-search-input,
+	.home-search-results-container {
 		width: 90%;
 	}
 }
